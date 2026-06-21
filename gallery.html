@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+
+<body>
+
+    <h1>Image Gallery</h1>  
+
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('camera')">Camera</button>
+        <button onclick="filterImages('download')">Download</button>
+        <button onclick="filterImages('shared')">Shared</button>
+    </div>
+
+    <div class="gallery">
+        <div class="image-card" data-category="shared">
+            <img src="images/mountain.jpg" onclick="openLightbox(this.src)" alt="Nature Image">
+        </div>
+
+        <div class="image-card" data-category="camera">
+            <img src="images/street.jpg" onclick="openLightbox(this.src)" alt="City Image">
+        </div>
+
+        <div class="image-card" data-category="download">
+            <img src="images/tiger.jpg" onclick="openLightbox(this.src)" alt="Animal Image">
+        </div>
+
+        <div class="image-card" data-category="camera">
+            <img src="images/lotus.jpg" onclick="openLightbox(this.src)" alt="Nature Image">
+        </div>
+
+        <div class="image-card" data-category="camera">
+            <img src="images/night.jpg" onclick="openLightbox(this.src)" alt="City Image">
+        </div>
+
+        <div class="image-card" data-category="download">
+            <img src="images/lion.jpg" onclick="openLightbox(this.src)" alt="Animal Image">
+        </div>
+
+        <div class="image-card" data-category="shared">
+            <img src="images/trees.jpg" onclick="openLightbox(this.src)" alt="Nature Image">
+        </div>
+
+        <div class="image-card" data-category="download">
+            <img src="images/building.jpg" onclick="openLightbox(this.src)" alt="City Image">
+        </div>
+    </div>
+
+    <div id="lightbox">
+        <button class="close" onclick="closeLightbox()">×</button>
+        <button class="prev" onclick="previousImage()">❮</button>
+
+        <img id="lightboxImage" src="">
+
+        <button class="next" onclick="nextImage()">❯</button>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
